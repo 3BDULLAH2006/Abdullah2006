@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>تسجيل الدخول</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 </head>
+
 <body>
-    <div class="login-wrapper">
-        <h1>تسجيل الدخول</h1>
-        
-        <div class="form-group">
-            <label>اسم المستخدم:</label>
-            <input type="text" placeholder="أدخل اسمك هنا">
-        </div>
+    <header>
+        <h1>My Website</h1>
+    </header>
 
-        <div class="form-group">
-            <label>كلمة المرور:</label>
-            <input type="password" placeholder="أدخل كلمة المرور">
-        </div>
+    <main>
+        <section>
+            <h2>Login</h2>
 
-        <button type="submit">دخول</button>
-    </div>
+            <form>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <br>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 3bdullah Website</p>
+    </footer>
 </body>
 </html>
