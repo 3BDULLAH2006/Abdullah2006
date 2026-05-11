@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+  font-family: font_one; /* set name */
+  src: url(GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf); /* url of the font */
+}
+
+:root{
+   --main-red: #ff0000;
+    --red-light: #fac7c3;
+    --bg-light: #8B0000;
+    --blood-dark: #4a0000;
+    --blood-glow: rgba(255,0,0,0.6);
+    --card-bg: #1a0f0f;
+    --text-dark: #f6c8c8;
+    --text-muted: #ffc8c8;
+}
+body{
+    font-family: font_one, Arial, sans-serif;
+    background: linear-gradient(to bottom, #e72a2a, #430d0d);
+    color: var(--text-dark);
+    height: 1000px;
+
+}
+.main-header, .main-footer{
+    background-color: hsl(0, 0%, 0%);
+    color: var(--main-red);
+    text-align: center;
+}
+.main-header{
+    padding: 20px;
+    border-bottom: 2px solid var(--red-light);
+}
+.main-footer{
+    padding: 15px;
+    margin-top: 50px;
+    border-top: 2px solid var(--red-light);
+}
+.navbar{
+    margin-top: 15px;
+}
+.navbar a{
+    color: var(--text-dark);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    background-color: var(--red-light);
+    color: var(--main-red); 
+    transform: translateY(-2px);
+}
+main{
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+main section, .member-card{
+    background-color: var(--card-bg);
+  border: 1px solid rgba(255,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(255,0,0,0.5);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+main section{
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+main section h2{
+    margin-bottom: 15px;
+    color: var(--main-red);
+}
+input{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ff0000;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        background-color: #ffe4e4;
+        color: var(--text-dark);
+}
+input::placeholder{
+    color: var(--text-muted);
+}
+button{
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, var(--main-red), var(--red-light));
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background: linear-gradient(to right, var(--red-light), var(--main-red));
+    color: #000000;
+    transform: scale(1.03);
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member-card {
+    width: 250px;
+    min-height: 140px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px  rgba(255,0,0,0.6);
+    border-color: var(--main-red);
+}
+
+.member-card p {
+    color: var(--text-dark);
+    line-height: 2.5;
+}
+
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .member-card {
+        width: 90%;
+    }
+}
